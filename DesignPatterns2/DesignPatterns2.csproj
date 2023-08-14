@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB9FA32F-106A-40F0-BD46-8C70CA7983C6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DesignPatterns</RootNamespace>
+    <AssemblyName>DesignPatterns</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cap1Factory\ExemploConsomeConnectionFactory.cs" />
+    <Compile Include="Cap1Factory\ConnectionFactory.cs" />
+    <Compile Include="Cap2Flyweight\Do.cs" />
+    <Compile Include="Cap2Flyweight\ExemploConsomeNotasMusicais.cs" />
+    <Compile Include="Cap2Flyweight\Fa.cs" />
+    <Compile Include="Cap2Flyweight\INota.cs" />
+    <Compile Include="Cap2Flyweight\La.cs" />
+    <Compile Include="Cap2Flyweight\Mi.cs" />
+    <Compile Include="Cap2Flyweight\NotasMusicais.cs" />
+    <Compile Include="Cap2Flyweight\Piano.cs" />
+    <Compile Include="Cap2Flyweight\Re.cs" />
+    <Compile Include="Cap2Flyweight\Si.cs" />
+    <Compile Include="Cap2Flyweight\Sol.cs" />
+    <Compile Include="Cap3Memento\Contrato.cs" />
+    <Compile Include="Cap3Memento\EstadoDoContrato.cs" />
+    <Compile Include="Cap3Memento\ExemploConsomeContrato.cs" />
+    <Compile Include="Cap3Memento\Historico.cs" />
+    <Compile Include="Cap3Memento\TipoContrato.cs" />
+    <Compile Include="Cap4Interpreter\Divisao.cs" />
+    <Compile Include="Cap4Interpreter\ExemploConsomeCalculadora.cs" />
+    <Compile Include="Cap4Interpreter\IExpressao.cs" />
+    <Compile Include="Cap4Interpreter\Multiplicacao.cs" />
+    <Compile Include="Cap4Interpreter\Numero.cs" />
+    <Compile Include="Cap4Interpreter\RaizQuadrada.cs" />
+    <Compile Include="Cap4Interpreter\Soma.cs" />
+    <Compile Include="Cap4Interpreter\Subtracao.cs" />
+    <Compile Include="Cap5Visitor\ExemploConsomeCalculadoraComImpressora.cs" />
+    <Compile Include="Cap5Visitor\ImpressoraVisitor.cs" />
+    <Compile Include="Cap5Visitor\IVisitor.cs" />
+    <Compile Include="Cap5Visitor\PreFixaVisitor.cs" />
+    <Compile Include="Cap6Bridge\EnviaPorEmail.cs" />
+    <Compile Include="Cap6Bridge\EnviaPorSMS.cs" />
+    <Compile Include="Cap6Bridge\ExemploConsomeBridge.cs" />
+    <Compile Include="Cap6Bridge\IEnviador.cs" />
+    <Compile Include="Cap6Bridge\IMensagem.cs" />
+    <Compile Include="Cap6Bridge\MensagemCliente.cs" />
+    <Compile Include="Cap6Bridge\MensagemAdministrativa.cs" />
+    <Compile Include="Cap7Command\ExemploConsomeCommand.cs" />
+    <Compile Include="Cap7Command\FilaDeTrabalho.cs" />
+    <Compile Include="Cap7Command\FinalizaPedido.cs" />
+    <Compile Include="Cap7Command\IComando.cs" />
+    <Compile Include="Cap7Command\PagaPedido.cs" />
+    <Compile Include="Cap7Command\Pedido.cs" />
+    <Compile Include="Cap7Command\Status.cs" />
+    <Compile Include="Cap8Adapter\Cliente.cs" />
+    <Compile Include="Cap8Adapter\ExemploConsomeAdapter.cs" />
+    <Compile Include="Cap8Adapter\GeradorDeXml.cs" />
+    <Compile Include="Cap9FacadeSingleton\ExemploCodigoLegado\ClienteDAO.cs" />
+    <Compile Include="Cap9FacadeSingleton\ExemploCodigoLegado\Cobranca.cs" />
+    <Compile Include="Cap9FacadeSingleton\ExemploCodigoLegado\ContatoCliente.cs" />
+    <Compile Include="Cap9FacadeSingleton\EmpresaFacade.cs" />
+    <Compile Include="Cap9FacadeSingleton\EmpresaFacadeSingleton.cs" />
+    <Compile Include="Cap9FacadeSingleton\ExemploCodigoLegado\Fatura.cs" />
+    <Compile Include="Cap9FacadeSingleton\ExemploCodigoLegado\Tipo.cs" />
+    <Compile Include="Cap9FacadeSingleton\ExemploConsomeFacade.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
